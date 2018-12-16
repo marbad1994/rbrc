@@ -8,7 +8,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Creative - Start Bootstrap Theme</title>
+    <title>Siam Shop - Asiatiska Livsmedel</title>
+    <link rel="icon" href="static/img/icon.png">
 
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
@@ -127,7 +128,16 @@
     id: 'mapbox.streets',
     accessToken: 'pk.eyJ1IjoibWFyY3VzYmFkZXIiLCJhIjoiY2puZzZkYW1sMDUybjN2cWlweDIwb2ZkcyJ9.zspxZqApP5YVr1nsHu3nvQ'
 }).addTo(mymap);
-var marker = L.marker([58.411125, 15.629422500000032]).addTo(mymap);
+
+var greenIcon = L.icon({
+    iconUrl: 'static/img/marker.png',
+
+    iconSize:     [22, 38], // size of the icon
+});
+
+
+var marker = L.marker([58.411125, 15.629422500000032], {icon: greenIcon}).addTo(mymap);
+//var marker = L.addAwesomeMarkers(lng = 58.411125, lat = 15.629422500000032, icon = awesomeIcons(icon = 'ion-ionic', library = 'ion', markerColor = 'red')).addTo(mymap);
 
     </script>
   </body>
